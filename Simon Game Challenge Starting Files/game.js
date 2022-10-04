@@ -1,32 +1,51 @@
 var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = new Array();
+var userClickedPattern = new Array();
+var level = 0;
+
+function paySound(name) {
+	const audio = new Audio("sounds/" + name + ".mp3");
+	audio.play();
+}
 
 function nextSequence() {
 	var randomNumber = Math.floor(Math.random() * 4);
 	var randomChosenColour = buttonColours[randomNumber];
 	gamePattern.push(randomChosenColour);
+	paySound(randomChosenColour);
+
 	return randomChosenColour;
+}
+function animatePress(currentColour) {
+	var id = "#" + currentColour;
+	$(id).addClass("pressed");
+	setTimeout(function () {
+		$(id).removeClass("pressed");
+	}, 100);
+	console.log(id);
 }
 
 var id = "#" + nextSequence();
 $(id).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
 
-$("#red").click(function () {
-	const audio = new Audio("sounds/red.mp3");
-	audio.play();
+$(".btn").click(function (event) {
+	var userChosenColour = event.target.id;
+	userClickedPattern.push(userChosenColour);
+	paySound(userChosenColour);
+	animatePress(userChosenColour);
+	level++;
+	$("#level-title").text("Level " + level);
+	console.log(level);
+	console.log(userClickedPattern);
 });
 
-$("#blue").click(function () {
-	const audio = new Audio("sounds/blue.mp3");
-	audio.play();
+$("body").keypress(function (event) {
+	console.log(event.key);
+	if (event.key === "a") {
+		nextSequence();
+	} else alert("you pressed " + event.key);
 });
 
-$("#yellow").click(function () {
-	const audio = new Audio("sounds/yellow.mp3");
-	audio.play();
-});
-
-$("#green").click(function () {
-	const audio = new Audio("sounds/green.mp3");
-	audio.play();
-});
+function checkAnswer(currentLevel) {
+	currentLevel;
+}
