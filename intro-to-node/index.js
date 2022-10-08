@@ -1,5 +1,9 @@
-//jsint esversion:6
+const superheroes = require("superheroes");
 
-const fs = require("fs");
+superheroes.all;
+//=> ['3-D Man', 'A-Bomb', …]
 
-fs.copyFile;
+var mySuperHero = superheroes.random();
+//=> 'Spider-Ham'
+
+console.log(mySuperHero);
