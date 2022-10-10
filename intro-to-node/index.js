@@ -1,9 +1,11 @@
-const superheroes = require("superheroes");
+const express = require("express");
 
-superheroes.all;
-//=> ['3-D Man', 'A-Bomb', …]
+const app = express();
 
-var mySuperHero = superheroes.random();
-//=> 'Spider-Ham'
+app.get("/", function (req, res) {
+	res.send("<h1>Hello, world! Naren</h1>");
+});
 
-console.log(mySuperHero);
+app.listen(3000, function () {
+	console.log("Server started on port 3000");
+});

@@ -6,3 +6,6 @@
 /jQuery
 /intro-to-node/node_modules
 /intro-to-node/package-lock.json
+
+/intro-to-express/node_modules
+/intro-to-express/package-lock.json
