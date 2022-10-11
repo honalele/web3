@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/honalele/web3/issues"
   },
-  "homepage": "https://github.com/honalele/web3#readme"
+  "homepage": "https://github.com/honalele/web3#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
