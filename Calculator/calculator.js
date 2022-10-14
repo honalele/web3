@@ -11,10 +11,10 @@ app.get("/", function (req, res) {
 
 app.post("/", function (req, res) {
 	console.log(req.body.num1);
-	var num1 = req.body.num1;
-	var num2 = req.body.num2;
+	var num1 = Number(req.body.num1);
+	var num2 = Number(req.body.num2);
 	total = num1 + num2;
-	res.send(total);
+	res.send("计算的结果是： " + total);
 });
 
 app.listen(3000, function () {
