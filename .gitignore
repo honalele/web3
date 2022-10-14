@@ -9,3 +9,6 @@
 
 /intro-to-express/node_modules
 /intro-to-express/package-lock.json
+
+/Calculator/node_modules
+/Calculator/package-lock.json
