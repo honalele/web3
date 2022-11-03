@@ -12,3 +12,6 @@
 
 /Calculator/node_modules
 /Calculator/package-lock.json
+
+/api-test/node_modules
+/api-test/package-lock.json
