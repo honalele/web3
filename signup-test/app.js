@@ -22,3 +22,5 @@ app.post("/", function (req, res) {
 app.listen(3000, function () {
 	console.log("Sign up server is now running");
 });
+
+//mailchimp api: 987cbdcc2176d02b0a430f9b92d04c84-us5
