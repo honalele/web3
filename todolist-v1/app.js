@@ -3,41 +3,30 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+var items = [];
+
 app.set("view engine", "ejs");
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
 	var today = new Date();
-	var currentDay = today.getDay();
-	var day = "";
+	var options = {
+		weekday: "long",
+		day: "numeric",
+		month: "long",
+	};
 
-	switch (currentDay) {
-		case 0:
-			day = "Sunday";
-			break;
-		case 1:
-			day = "Monday";
-			break;
-		case 2:
-			day = "Tuesday";
-			break;
-		case 3:
-			day = "Wednesday";
-			break;
-		case 4:
-			day = "Thursday";
-			break;
-		case 5:
-			day = "Saturday";
-			break;
-		case 6:
-			day = "Sunday";
-			break;
+	var day = today.toLocaleDateString("ja-JP-u-ca-japanese", options);
 
-		default:
-			console.log("Error: CurrentDay is >6");
-			break;
-	}
-	res.render("list", { kindOfDay: day });
+	res.render("list", { kindOfDay: day, newListItems: items });
+});
+
+app.post("/", function (req, res) {
+	var item = req.body.newItem;
+	items.push(item);
+	res.redirect("/");
+	console.log(item);
 });
 
 app.listen(3000, function () {
