@@ -18,8 +18,10 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+let posts = [];
+
 app.get("/", function (req, res) {
-	res.render("home", { startingContent: homeStartingContent });
+	res.render("home", { title: "Home", startingContent: homeStartingContent });
 });
 
 app.get("/about", function (req, res) {
@@ -39,6 +41,13 @@ app.post("/compose", function (req, res) {
 		blogTitle: req.body.postTitle,
 		blogBody: req.body.postBody,
 	};
+
+	posts.push(blogPost);
+
+	res.render("home", {
+		title: blogPost.blogTitle,
+		startingContent: blogPost.blogBody,
+	});
 
 	console.log(blogPost);
 });
