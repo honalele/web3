@@ -18,10 +18,15 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+var _ = require("lodash");
+
 let posts = [];
+posts.push({ blogTitle: "Home", blogBody: homeStartingContent });
 
 app.get("/", function (req, res) {
-	res.render("home", { title: "Home", startingContent: homeStartingContent });
+	res.render("home", {
+		posts: posts,
+	});
 });
 
 app.get("/about", function (req, res) {
@@ -45,11 +50,16 @@ app.post("/compose", function (req, res) {
 	posts.push(blogPost);
 
 	res.render("home", {
-		title: blogPost.blogTitle,
-		startingContent: blogPost.blogBody,
+		posts: posts,
 	});
+});
 
-	console.log(blogPost);
+app.get("/post/:postID", function (req, res) {
+	if (req.params.postID === "Test") {
+		console.log("Match found!");
+	} else {
+		console.log("Not a match!");
+	}
 });
 
 app.listen(3000, function () {
