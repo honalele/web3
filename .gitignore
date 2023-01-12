@@ -18,3 +18,5 @@
 
 /signup-test/node_modules
 /signup-test/package-lock.json
+
+/node_modules

@@ -53,21 +53,35 @@ app.post("/compose", function (req, res) {
 	});
 });
 
-app.get("/post/:postID", function (req, res) {
-	postIDLowers = lodash.lowerCase(req.params.postID).split(" ");
-	postIDLowerResult = "";
-	for (var i = 0; i < postIDLowers.length; i++) {
+function getLowerTitle(title) {
+	titleLowers = lodash.lowerCase(title).split(" ");
+	titleLowerResult = "";
+	for (var i = 0; i < titleLowers.length; i++) {
 		if (i === 0) {
-			postIDLowerResult = postIDLowers[i];
+			titleLowerResult = titleLowers[i];
 		} else {
-			postIDLowerResult = postIDLowerResult + "-" + postIDLowers[i];
+			titleLowerResult = titleLowerResult + "-" + titleLowers[i];
 		}
 	}
-	console.log(postIDLowerResult);
+	return titleLowerResult;
+}
 
-	if (postIDLowerResult === "another-post") {
-		console.log("Match found!");
-	} else {
+app.get("/post/:postID", function (req, res) {
+	postIDLowerResult = getLowerTitle(req.params.postID);
+	console.log(postIDLowerResult);
+	titleFound = false;
+	posts.forEach(function (post) {
+		blogTitleLower = getLowerTitle(post.blogTitle);
+		if (blogTitleLower === postIDLowerResult) {
+			titleFound = true;
+			res.render("post", {
+				title: post.blogTitle,
+				body: post.blogBody,
+			});
+		}
+	});
+
+	if (!titleFound) {
 		console.log("Not a match!");
 	}
 });
