@@ -18,5 +18,8 @@
   "homepage": "https://github.com/honalele/web3#readme",
   "devDependencies": {
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
