@@ -20,3 +20,6 @@
 /signup-test/package-lock.json
 
 /node_modules
+
+/mern-sns/node_modules
+/mern-sns/package-lock.json
