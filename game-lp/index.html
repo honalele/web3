@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Story Games</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<!-- header section -->
+		<header class="d-flex align-items-center justify-content-between w-100">
+			<div class="logo-title">
+				<h2>Story Games</h2>
+			</div>
+			<div>
+				<img src="./images/book-close.png" class="book-close-btn" />
+                <img src="./images/book-open.png" class="book-open-btn" />
+			</div>
+
+            <div class="menu-bar">
+                <ul class="list-unstyled">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#game">Game</a></li>
+                    <li><a href="#company">Company</a></li>
+                    <li><a href="#device">Device</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+		</header>
+
+		<!--hero section-->
+		<section class="hero vh-100 d-flex align-items-center">
+			<div class="container">
+				<div class="row">
+					<div class="title col-md-8">
+						<h1>Another World</h1>
+						<h3>~Fantasy Story~</h3>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--game gallery section-->
+		<section class="game bg-light" id="game">
+			<div class="container text-dark">
+				<div class="row">
+					<div class="col-sm-7 mx-auto text-center">
+						<h2>ゲームラインアップ</h1>
+						<h3>今週の売上ベスト3</h2>
+					</div>
+				</div>
+
+				<div class="row mt-3 g-3">
+                    <div class="col-md-4">
+                        <div class="game-card card-effect text-center">
+                            <img src="./images/another-world.jpg" alt="" />
+                            <div class="my-4 px-1">
+                                <h5>Another World</h5>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
+                                    facere voluptas suscipit molestiae hic atque molestias est,
+                                    neque, exercitationem unde rerum dolorem tempora sunt, culpa
+                                    dolor ipsa aperiam placeat adipisci!
+                                </p>
+                            </div>
+                            <button class="btn btn-primary mb-3">購入</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card card-effect text-center">
+                            <img src="./images/butterfly.jpg" alt="" />
+                            <div class="my-4 px-1">
+                                <h5>Butterfly</h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Praesentium nemo dolorum, eveniet nesciunt labore quos veritatis id laboriosam nisi doloribus incidunt harum tempora rerum quaerat esse quam eum provident? Deserunt?
+                                </p>
+                            </div>
+                            <button class="btn btn-primary mb-3">購入</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="game-card card-effect text-center">
+                            <img src="./images/heaven-story.jpg" alt="" />
+                            <div class="my-4 px-1">
+                                <h5>Heaven Story</h5>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci accusamus expedita exercitationem 
+                                    laborum obcaecati voluptatibus veniam cum magni tempora porro numquam nam vitae, consequuntur odit, labore quisquam, nisi ea. Ut.
+                                </p>
+                            </div>
+                            <button class="btn btn-primary mb-3">購入</button>
+                        </div>
+                    </div>
+					
+				</div>
+			</div>
+		</section>
+
+        <!-- Company section-->
+        <section class="company vh-100" id="company">
+            <div class="row">
+                <div class="company-info col-md-9 text-end ms-auto p-5">
+                    <h2>会社情報</h2>
+                    <div>
+                        <p>
+                            「物語がすべて」を信念に活動しているStoryGames.
+                        </p>
+                        <p>その作品には人を魅了する力を持っており<br>
+                            日本にとどまらずに世界中でプレイされているのが特徴
+                        </p>
+                    </div>
+                    <div class="company-text-last">
+                        <p>
+                            今年リリースしたAnother Worldは世界中を席巻し
+                            <br>
+                            さらなるStoryGamesの魅力を広げている・・・
+                        </p>
+                        <div class="more">
+                            <span class="fs-2">More Detail</span>
+                            <a href="#"><i class="bi bi-arrow-right-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--device section-->
+        <section class="device bg-light" id="device">
+			<div class="container text-dark">
+				<div class="row">
+					<div class="col-sm-7 mx-auto text-center">
+						<h2>対応機種</h1>
+						<h3>対応機種・ハード一覧</h2>
+					</div>
+				</div>
+
+
+                <div class="row g-5 mt-5">
+                    <div class="col-sm-6">
+                        <div class="device-card card-effect text-center">
+                            <img src="./images/nintendo-switch.jpg">
+                            <div class="overlay"></div>
+                            <h3>Nitenndo Switch</h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="device-card card-effect text-center">
+                            <img src="./images/ps4.jpg">
+                            <div class="overlay"></div>
+                            <h3>Playstation</h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="device-card card-effect text-center">
+                            <img src="./images/x-box.jpg">
+                            <div class="overlay"></div>
+                            <h3>X box</h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="device-card card-effect text-center">
+                            <img src="./images/pc-game.jpg">
+                            <div class="overlay"></div>
+                            <h3>PC</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</section>
+
+        <!--Contact form -->
+        <section class="contact vh-100" id="contact">
+            <div class="contatiner py-5 px-0">
+                <div class="row"></div>
+                <div class="contact-info col-lg-6">
+                    <h2 class="mb-5">お問いあわせ</h2>
+
+                    <!--ここからフォーム-->
+                    <form action="" class="pt-3 px-5">
+                        <input type="text" class="form-control" placeholder="Full Name">
+                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="tel" class="form-control" placeholder="Tel">
+                        <textarea name="" id="" cols="80" rows="10" placeholder="問い合わせ内容"></textarea>
+                        <br>
+                        <button class="btn btn-primary mt-3 px-5 py-3 fs-4">送信</button>
+                    </form>
+                    
+                </div>
+
+                <div class="col-lg-4 ms-auto vision-sight-logo">
+                    <h3 class="text-end">Vision Sight</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-dark">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-md-4">
+                        <h2 class="mt-5 pe-3">Story Games</h2>
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="">Brand</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" target="_blank" >About</a></li>
+                            <li><a href="#" target="_blank" >Service</a></li>
+                            <li><a href="#" target="_blank" >Features</a></li>
+                            <li><a href="#" target="_blank" >Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h5 class="">More</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" target="_blank" >FAQ</a></li>
+                            <li><a href="#" target="_blank" >Service</a></li>
+                            <li><a href="#" target="_blank" >Features</a></li>
+                            <li><a href="#" target="_blank" >Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="">Pages</h5>
+                        <ul class="list-unstyled">
+                            <li>Address: 2715 Ash Dr. San Jose, South Dakota 83475</li>
+                            <li>Email: shincode0712@gmail.com</li>
+                            <li>Phone: 111-222-333</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./main.js"></script>
+
+	</body>
+</html>
