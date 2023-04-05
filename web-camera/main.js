@@ -28,9 +28,21 @@ $(function () {
 		if (!myStream) {
 			return;
 		}
+		var $div = $(`
+        <div class = "snapshot">
+        <canvas/>
+        <a class="btn btn-default">
+        <span class="glyphicon glyphicon-download-alt"></span>
+        </a>
+        </div>
+        `);
+		$(".preview").append($div);
+		var video = document.getElementById("myVideo");
+		var canvas = $div.find("canvas")[0];
+		var context = canvas.getContext("2d");
 	}
 
 	$("#startVideo").click(startVideo).click();
 	$("#stopVideo").click(stopVideo);
-	$("#snapshot").click(snapshot);
+	$("#snapshot").click(snapShot);
 });
