@@ -77,7 +77,11 @@ $(function () {
         </div>`);
 		$(".preview".append($div));
 		var $video = $dov.find("video");
-        var url = URL.
+		var url = URL.createObjectURL(event.data);
+		$video.attr("src", url);
+		var $a = $div.find("a");
+		$a.attr("download", "video.webm");
+		$a.attr("href", url);
 	}
 
 	$("#startVideo").click(startVideo).click();
