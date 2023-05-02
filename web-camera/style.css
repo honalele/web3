@@ -17,6 +17,7 @@ body {
 .video video {
 	width: 320px;
 	height: 240px;
+	filter: blur(5px);
 }
 
 .video .buttons {
