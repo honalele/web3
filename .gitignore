@@ -25,3 +25,8 @@
 /mern-sns/package-lock.json
 /mern-sns/node_modules
 /mern-sns/.env
+
+/mern-60/node_modules
+/mern-60/package-lock.json
+/mern-60/node_modules
+/mern-60/.env
