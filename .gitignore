@@ -26,7 +26,12 @@
 /mern-sns/node_modules
 /mern-sns/.env
 
-/mern-60/node_modules
-/mern-60/package-lock.json
-/mern-60/node_modules
+/mern-60/server/node_modules/
+/mern-60/server/package-lock.json
+/mern-60/server/node_modules
 /mern-60/.env
+/mern-60/server/*.js
+/mern-60/client/node_modules
+
+autogpt/
+autogpt/*.yml
